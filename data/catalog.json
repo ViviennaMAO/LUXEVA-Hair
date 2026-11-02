@@ -1,0 +1,1121 @@
+{
+ "categories": [
+  {
+   "id": "lace-front",
+   "name": "Lace Front Wigs",
+   "image": "img/silk-straight.jpg"
+  },
+  {
+   "id": "glueless",
+   "name": "Glueless Wigs",
+   "image": "img/deep-curly-glueless.jpg"
+  },
+  {
+   "id": "bob",
+   "name": "Bob Wigs",
+   "image": "img/chestnut-bob.jpg"
+  },
+  {
+   "id": "curly",
+   "name": "Curly Wigs",
+   "image": "img/kinky-curly.jpg"
+  },
+  {
+   "id": "colored",
+   "name": "Colored Wigs",
+   "image": "img/ash-balayage.jpg"
+  },
+  {
+   "id": "extensions",
+   "name": "Hair Extensions",
+   "image": "img/clipin-613.jpg"
+  },
+  {
+   "id": "synthetic",
+   "name": "Synthetic & Cosplay",
+   "image": "img/ice-blue-bob.jpg"
+  }
+ ],
+ "products": [
+  {
+   "id": "LX-1001",
+   "slug": "silk-press-straight-13x4-hd-lace-front",
+   "name": "Silk Press Straight 13x4 HD Lace Front Wig",
+   "categories": [
+    "lace-front",
+    "best"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Straight",
+   "color": "Chestnut Brown",
+   "lace": "13x4 HD Lace",
+   "basePrice": 89.99,
+   "compareAt": 149.99,
+   "lengths": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30
+   ],
+   "lengthStep": 12,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/silk-straight.jpg",
+   "gallery": [
+    "img/silk-straight.jpg",
+    "img/styling.jpg",
+    "img/display-heads.jpg"
+   ],
+   "rating": 4.7,
+   "reviews": 2318,
+   "sold": "10K+",
+   "badge": "Best Seller",
+   "description": "Sleek, salon-fresh straight hair made from 100% unprocessed virgin human hair. The invisible HD lace melts into every skin tone for a natural hairline.",
+   "highlights": [
+    "100% Brazilian virgin human hair, 10A grade",
+    "13x4 HD Swiss lace, pre-plucked with baby hair",
+    "Can be dyed, bleached, curled & straightened",
+    "Adjustable straps + 4 combs, breathable cap"
+   ]
+  },
+  {
+   "id": "LX-1002",
+   "slug": "honey-blonde-27-straight-lace-front",
+   "name": "Honey Blonde #27 Straight Lace Front Wig",
+   "categories": [
+    "lace-front",
+    "colored"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Straight",
+   "color": "Honey Blonde #27",
+   "lace": "13x4 HD Lace",
+   "basePrice": 129.99,
+   "compareAt": 199.99,
+   "lengths": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26
+   ],
+   "lengthStep": 14,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/honey-blonde-straight.jpg",
+   "gallery": [
+    "img/honey-blonde-straight.jpg",
+    "img/showroom.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.6,
+   "reviews": 874,
+   "sold": "3K+",
+   "badge": "New",
+   "description": "Sun-kissed honey blonde, pre-colored by hand so you can wear it straight out of the box. Bright, even tone with no brassiness.",
+   "highlights": [
+    "Pre-colored #27 honey blonde, even from root to tip",
+    "Pre-bleached knots, pre-plucked hairline",
+    "Heat-resistant up to 180°C / 356°F",
+    "Ships on a mannequin-safe hairnet & gift box"
+   ]
+  },
+  {
+   "id": "LX-1003",
+   "slug": "glueless-wear-go-deep-curly-5x5",
+   "name": "Glueless Wear & Go Deep Curly 5x5 Lace Wig",
+   "categories": [
+    "glueless",
+    "curly",
+    "best"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Deep Curly",
+   "color": "Natural Black",
+   "lace": "5x5 HD Lace",
+   "basePrice": 109.99,
+   "compareAt": 179.99,
+   "lengths": [
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26
+   ],
+   "lengthStep": 12,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/deep-curly-glueless.jpg",
+   "gallery": [
+    "img/deep-curly-glueless.jpg",
+    "img/lifestyle-curls.jpg",
+    "img/display-heads.jpg"
+   ],
+   "rating": 4.8,
+   "reviews": 3104,
+   "sold": "20K+",
+   "badge": "Best Seller",
+   "description": "Pop it on and go — no glue, no gel. Pre-cut lace and an elastic band give a secure fit in under 60 seconds with bouncy, defined curls.",
+   "highlights": [
+    "Pre-cut lace, ready to wear in 60 seconds",
+    "Elastic band + pre-plucked hairline",
+    "Bouncy 3B/3C curl pattern that lasts",
+    "Beginner friendly, no adhesive needed"
+   ]
+  },
+  {
+   "id": "LX-1004",
+   "slug": "kinky-curly-afro-glueless-wig",
+   "name": "Kinky Curly Afro Glueless Wig",
+   "categories": [
+    "glueless",
+    "curly"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Kinky Curly",
+   "color": "Natural Black",
+   "lace": "4x4 Lace",
+   "basePrice": 99.99,
+   "compareAt": 159.99,
+   "lengths": [
+    12,
+    14,
+    16,
+    18,
+    20,
+    22
+   ],
+   "lengthStep": 10,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/kinky-curly.jpg",
+   "gallery": [
+    "img/kinky-curly.jpg",
+    "img/lifestyle-curls.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.7,
+   "reviews": 1562,
+   "sold": "5K+",
+   "badge": null,
+   "description": "Voluminous kinky curls that blend perfectly with natural 4A–4C textures. Full, fluffy and natural-looking volume from day one.",
+   "highlights": [
+    "Blends with 4A–4C natural hair",
+    "Glueless 4x4 lace closure",
+    "Full 180% density look",
+    "Can be co-washed and diffused"
+   ]
+  },
+  {
+   "id": "LX-1005",
+   "slug": "ice-blue-cosplay-bob-synthetic",
+   "name": "Ice Blue Cosplay Bob Wig with Bangs",
+   "categories": [
+    "bob",
+    "colored",
+    "synthetic"
+   ],
+   "hairType": "Synthetic",
+   "texture": "Straight",
+   "color": "Ice Blue",
+   "lace": "No Lace (Machine Made)",
+   "basePrice": 24.99,
+   "compareAt": 39.99,
+   "lengths": [
+    12
+   ],
+   "lengthStep": 0,
+   "densities": null,
+   "capSizes": [
+    "One Size (adjustable)"
+   ],
+   "image": "img/ice-blue-bob.jpg",
+   "gallery": [
+    "img/ice-blue-bob.jpg",
+    "img/wig-wall.jpg"
+   ],
+   "rating": 4.5,
+   "reviews": 4210,
+   "sold": "30K+",
+   "badge": "Cosplay Fave",
+   "description": "Vivid ice blue bob with full bangs for cosplay, parties and festivals. Soft, tangle-resistant fiber with natural shine.",
+   "highlights": [
+    "Premium heat-resistant Kanekalon fiber",
+    "Full blunt bangs, chin length",
+    "Adjustable rose-net cap",
+    "Free wig cap included"
+   ]
+  },
+  {
+   "id": "LX-1006",
+   "slug": "copper-red-blunt-bob-bangs",
+   "name": "Copper Red Blunt Bob Wig with Bangs",
+   "categories": [
+    "bob",
+    "colored"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Straight",
+   "color": "Copper Red #350",
+   "lace": "Glueless Machine Made",
+   "basePrice": 59.99,
+   "compareAt": 99.99,
+   "lengths": [
+    10,
+    12,
+    14
+   ],
+   "lengthStep": 8,
+   "densities": null,
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/copper-bob.jpg",
+   "gallery": [
+    "img/copper-bob.jpg",
+    "img/chestnut-bob.jpg"
+   ],
+   "rating": 4.6,
+   "reviews": 982,
+   "sold": "3K+",
+   "badge": null,
+   "description": "A bold copper red bob with a sharp blunt cut and wispy bangs. Fully machine-made — zero lace, zero glue, totally beginner-proof.",
+   "highlights": [
+    "Pre-colored copper #350",
+    "No lace, ready to wear",
+    "Lightweight 150% density",
+    "Breathable rose net cap"
+   ]
+  },
+  {
+   "id": "LX-1007",
+   "slug": "ash-blonde-balayage-body-wave",
+   "name": "Ash Blonde Balayage Body Wave Lace Front Wig",
+   "categories": [
+    "lace-front",
+    "colored"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Body Wave",
+   "color": "Ash Blonde Balayage",
+   "lace": "13x4 HD Lace",
+   "basePrice": 139.99,
+   "compareAt": 219.99,
+   "lengths": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26
+   ],
+   "lengthStep": 14,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/ash-balayage.jpg",
+   "gallery": [
+    "img/ash-balayage.jpg",
+    "img/blonde-brunette-waves.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.6,
+   "reviews": 693,
+   "sold": "2K+",
+   "badge": "Trending",
+   "description": "Dimensional dark-root ash balayage melted into soft body waves. Looks like a $400 salon color without the salon visit.",
+   "highlights": [
+    "Hand-painted rooted balayage",
+    "13x4 HD lace with bleached knots",
+    "Soft body wave, holds curl well",
+    "Can be toned or restyled"
+   ]
+  },
+  {
+   "id": "LX-1008",
+   "slug": "platinum-613-straight-lace-front",
+   "name": "Platinum 613 Blonde Straight Lace Front Wig",
+   "categories": [
+    "lace-front",
+    "colored"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Straight",
+   "color": "Platinum Blonde #613",
+   "lace": "13x4 Transparent Lace",
+   "basePrice": 149.99,
+   "compareAt": 239.99,
+   "lengths": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30
+   ],
+   "lengthStep": 15,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/platinum-613.jpg",
+   "gallery": [
+    "img/platinum-613.jpg",
+    "img/clipin-613.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.5,
+   "reviews": 1287,
+   "sold": "4K+",
+   "badge": null,
+   "description": "Pure #613 blonde — the perfect blank canvas to wear as-is or dye into any fantasy shade.",
+   "highlights": [
+    "Lightened to a clean #613",
+    "Dye to any color (pastel, red, pink…)",
+    "Transparent lace for light skin tones",
+    "Silky, minimal shedding"
+   ]
+  },
+  {
+   "id": "LX-1009",
+   "slug": "natural-black-long-body-wave-4x4",
+   "name": "Natural Black Long Body Wave 4x4 Closure Wig",
+   "categories": [
+    "best"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Body Wave",
+   "color": "Natural Black",
+   "lace": "4x4 Lace Closure",
+   "basePrice": 79.99,
+   "compareAt": 129.99,
+   "lengths": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30
+   ],
+   "lengthStep": 10,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/natural-black-wave.jpg",
+   "gallery": [
+    "img/natural-black-wave.jpg",
+    "img/display-heads.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.6,
+   "reviews": 5421,
+   "sold": "40K+",
+   "badge": "Best Value",
+   "description": "Everyday glamour at an everyday price. Natural black body waves with a 4x4 closure that’s easy to install and maintain.",
+   "highlights": [
+    "Unprocessed Peruvian human hair",
+    "4x4 lace closure, middle/free part",
+    "Natural black, can be dyed darker",
+    "Great beginner wig"
+   ]
+  },
+  {
+   "id": "LX-1010",
+   "slug": "auburn-loose-wave-v-part",
+   "name": "Auburn Loose Wave V-Part Wig",
+   "categories": [
+    "glueless",
+    "colored"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Loose Wave",
+   "color": "Auburn #33",
+   "lace": "V-Part (No Leave-out)",
+   "basePrice": 84.99,
+   "compareAt": 139.99,
+   "lengths": [
+    14,
+    16,
+    18,
+    20,
+    22,
+    24
+   ],
+   "lengthStep": 10,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/auburn-loose-wave.jpg",
+   "gallery": [
+    "img/auburn-loose-wave.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.5,
+   "reviews": 438,
+   "sold": "1K+",
+   "badge": null,
+   "description": "Rich auburn loose waves with a V-part design that blends with a thin strip of your own hair — no lace, no glue, ultra natural part.",
+   "highlights": [
+    "V-part, minimal leave-out",
+    "No lace, no glue",
+    "Rich auburn #33 color",
+    "Breathable, lightweight cap"
+   ]
+  },
+  {
+   "id": "LX-1011",
+   "slug": "ombre-brown-balayage-body-wave",
+   "name": "Ombre Brown Balayage Body Wave Wig",
+   "categories": [
+    "lace-front",
+    "colored",
+    "best"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Body Wave",
+   "color": "Ombre Brown",
+   "lace": "13x4 HD Lace",
+   "basePrice": 119.99,
+   "compareAt": 189.99,
+   "lengths": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26
+   ],
+   "lengthStep": 12,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/ombre-body-wave.jpg",
+   "gallery": [
+    "img/ombre-body-wave.jpg",
+    "img/blonde-brunette-waves.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.7,
+   "reviews": 1820,
+   "sold": "6K+",
+   "badge": "Best Seller",
+   "description": "Espresso roots melting into caramel ends with soft, beachy body waves — effortless color for any season.",
+   "highlights": [
+    "Soft ombre: dark root to caramel",
+    "13x4 HD lace frontal",
+    "Bouncy body wave pattern",
+    "Pre-plucked, bleached knots"
+   ]
+  },
+  {
+   "id": "LX-1012",
+   "slug": "bohemian-water-wave-braided-wig",
+   "name": "Bohemian Knotless Braided Wig",
+   "categories": [
+    "curly"
+   ],
+   "hairType": "Synthetic",
+   "texture": "Boho Braids",
+   "color": "Natural Black #1B",
+   "lace": "Full Lace (Braided)",
+   "basePrice": 89.99,
+   "compareAt": 149.99,
+   "lengths": [
+    26,
+    30,
+    36
+   ],
+   "lengthStep": 8,
+   "densities": null,
+   "capSizes": [
+    "One Size (adjustable)"
+   ],
+   "image": "img/boho-braided.jpg",
+   "gallery": [
+    "img/boho-braided.jpg",
+    "img/lifestyle-curls.jpg"
+   ],
+   "rating": 4.6,
+   "reviews": 756,
+   "sold": "2K+",
+   "badge": "Protective Style",
+   "description": "Hand-braided knotless boho braids with human-hair curly ends. Hours of braiding, done for you — protective and stylish.",
+   "highlights": [
+    "Hand-braided on a full lace cap",
+    "Human-hair curly boho pieces",
+    "Lightweight & tension-free",
+    "Lasts 4–6 weeks with care"
+   ]
+  },
+  {
+   "id": "LX-1013",
+   "slug": "spiral-curl-clip-in-extensions",
+   "name": "Spiral Curl Clip-in Hair Extensions (7 pcs)",
+   "categories": [
+    "extensions",
+    "curly"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Spiral Curl",
+   "color": "Dark Brown #2",
+   "lace": "Clip-in",
+   "basePrice": 49.99,
+   "compareAt": 79.99,
+   "lengths": [
+    14,
+    16,
+    18,
+    20
+   ],
+   "lengthStep": 8,
+   "densities": null,
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/spiral-curl-clipin.jpg",
+   "gallery": [
+    "img/spiral-curl-clipin.jpg",
+    "img/lifestyle-curls.jpg"
+   ],
+   "rating": 4.4,
+   "reviews": 512,
+   "sold": "2K+",
+   "badge": null,
+   "description": "Add instant length and volume with 7 clip-in wefts of defined spiral curls. Snap in, snap out — no damage.",
+   "highlights": [
+    "7 wefts, 16 silicone clips",
+    "120g full head set",
+    "Blends with 3B–4A textures",
+    "Reusable for 6+ months"
+   ]
+  },
+  {
+   "id": "LX-1014",
+   "slug": "seamless-clip-in-extensions-613",
+   "name": "Seamless Clip-in Extensions Platinum 613 (8 pcs)",
+   "categories": [
+    "extensions",
+    "colored"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Straight",
+   "color": "Platinum Blonde #613",
+   "lace": "Seamless PU Clip-in",
+   "basePrice": 69.99,
+   "compareAt": 119.99,
+   "lengths": [
+    14,
+    16,
+    18,
+    20,
+    22,
+    24
+   ],
+   "lengthStep": 10,
+   "densities": null,
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/clipin-613.jpg",
+   "gallery": [
+    "img/clipin-613.jpg",
+    "img/platinum-613.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.5,
+   "reviews": 1094,
+   "sold": "5K+",
+   "badge": "New",
+   "description": "Ultra-thin PU wefts lie flat against your head — completely invisible even with fine hair.",
+   "highlights": [
+    "Seamless PU weft, 0.1mm thin",
+    "8 pieces, 140g",
+    "Double drawn, full to the ends",
+    "Heat safe, dye-able"
+   ]
+  },
+  {
+   "id": "LX-1015",
+   "slug": "sleek-chestnut-silky-bob",
+   "name": "Sleek Chestnut Silky Bob Wig",
+   "categories": [
+    "bob",
+    "best"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Straight",
+   "color": "Chestnut Brown #4",
+   "lace": "5x5 HD Lace",
+   "basePrice": 64.99,
+   "compareAt": 109.99,
+   "lengths": [
+    8,
+    10,
+    12,
+    14
+   ],
+   "lengthStep": 7,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/chestnut-bob.jpg",
+   "gallery": [
+    "img/chestnut-bob.jpg",
+    "img/copper-bob.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.7,
+   "reviews": 2675,
+   "sold": "10K+",
+   "badge": "Best Seller",
+   "description": "A glossy, shoulder-skimming bob with a precision blunt cut. Glueless 5x5 lace makes it a 5-minute install.",
+   "highlights": [
+    "Glueless 5x5 HD lace",
+    "Precision blunt cut",
+    "Silky straight, low maintenance",
+    "Perfect for summer & work"
+   ]
+  },
+  {
+   "id": "LX-1016",
+   "slug": "ash-grey-shag-lob-synthetic",
+   "name": "Ash Grey Shag Lob Wig",
+   "categories": [
+    "bob",
+    "synthetic",
+    "colored"
+   ],
+   "hairType": "Synthetic",
+   "texture": "Wavy",
+   "color": "Ash Grey Ombre",
+   "lace": "Lace Part",
+   "basePrice": 34.99,
+   "compareAt": 54.99,
+   "lengths": [
+    14
+   ],
+   "lengthStep": 0,
+   "densities": null,
+   "capSizes": [
+    "One Size (adjustable)"
+   ],
+   "image": "img/ash-shag-lob.jpg",
+   "gallery": [
+    "img/ash-shag-lob.jpg",
+    "img/wig-wall.jpg"
+   ],
+   "rating": 4.3,
+   "reviews": 1430,
+   "sold": "5K+",
+   "badge": null,
+   "description": "Effortless textured shag lob in a cool rooted ash grey. Lightweight synthetic fiber that holds its shape wash after wash.",
+   "highlights": [
+    "Heat-friendly fiber up to 150°C",
+    "Rooted ash ombre",
+    "Lace part for a natural parting",
+    "Pre-styled, wear out of the box"
+   ]
+  },
+  {
+   "id": "LX-1017",
+   "slug": "1b-30-highlight-body-wave-lace-front",
+   "name": "1B/30 Highlight Body Wave Lace Front Wig",
+   "categories": [
+    "lace-front",
+    "colored"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Body Wave",
+   "color": "1B/30 Highlights",
+   "lace": "13x6 HD Lace",
+   "basePrice": 134.99,
+   "compareAt": 209.99,
+   "lengths": [
+    18,
+    20,
+    22,
+    24,
+    26,
+    28
+   ],
+   "lengthStep": 14,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/highlight-body-wave.jpg",
+   "gallery": [
+    "img/highlight-body-wave.jpg",
+    "img/ombre-body-wave.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.6,
+   "reviews": 882,
+   "sold": "3K+",
+   "badge": null,
+   "description": "Warm copper highlights woven through natural black body waves. The deep 13x6 part space gives you endless parting options.",
+   "highlights": [
+    "13x6 deep parting space",
+    "1B/30 hand-placed highlights",
+    "Pre-plucked, bleached knots",
+    "Holds curls & updos beautifully"
+   ]
+  },
+  {
+   "id": "LX-1018",
+   "slug": "natural-loose-curl-glueless",
+   "name": "Natural Loose Curl Glueless Wig",
+   "categories": [
+    "glueless",
+    "curly"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Loose Curl",
+   "color": "Natural Black",
+   "lace": "6x4 Pre-cut Lace",
+   "basePrice": 94.99,
+   "compareAt": 149.99,
+   "lengths": [
+    14,
+    16,
+    18,
+    20,
+    22
+   ],
+   "lengthStep": 10,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/loose-curl-glueless.jpg",
+   "gallery": [
+    "img/loose-curl-glueless.jpg",
+    "img/lifestyle-curls.jpg"
+   ],
+   "rating": 4.7,
+   "reviews": 1209,
+   "sold": "4K+",
+   "badge": null,
+   "description": "Soft, touchable loose curls with a pre-cut 6x4 lace. Wear & go in minutes — perfect for beginners.",
+   "highlights": [
+    "6x4 pre-cut lace, wear & go",
+    "Bleached knots, natural hairline",
+    "Soft loose curl, low frizz",
+    "Elastic band & adjustable straps"
+   ]
+  },
+  {
+   "id": "LX-1019",
+   "slug": "messy-wave-headband-wig",
+   "name": "Messy Wave Headband Wig",
+   "categories": [
+    "glueless"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Messy Wave",
+   "color": "Dark Brown",
+   "lace": "Headband (No Lace)",
+   "basePrice": 54.99,
+   "compareAt": 89.99,
+   "lengths": [
+    14,
+    16,
+    18,
+    20
+   ],
+   "lengthStep": 8,
+   "densities": [
+    {
+     "value": "150%",
+     "add": 0
+    },
+    {
+     "value": "180%",
+     "add": 15
+    },
+    {
+     "value": "250%",
+     "add": 35
+    }
+   ],
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/headband-wave.jpg",
+   "gallery": [
+    "img/headband-wave.jpg",
+    "img/styling.jpg"
+   ],
+   "rating": 4.4,
+   "reviews": 980,
+   "sold": "3K+",
+   "badge": "Under $60",
+   "description": "The ultimate low-effort wig: slip it on, add a headband and go. Zero lace, zero glue, 100% natural movement.",
+   "highlights": [
+    "Comes with 5 free headbands",
+    "No lace, no glue",
+    "Wear your own edges",
+    "Ideal for gym, work & travel"
+   ]
+  },
+  {
+   "id": "LX-1020",
+   "slug": "reddish-brown-water-wave-bundles",
+   "name": "Reddish Brown Water Wave Bundles (3 pcs)",
+   "categories": [
+    "extensions",
+    "curly"
+   ],
+   "hairType": "Human Hair",
+   "texture": "Water Wave",
+   "color": "Reddish Brown",
+   "lace": "Bundles (Sew-in)",
+   "basePrice": 74.99,
+   "compareAt": 119.99,
+   "lengths": [
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24
+   ],
+   "lengthStep": 9,
+   "densities": null,
+   "capSizes": [
+    "Average (22.5\")",
+    "Small (21.5\")",
+    "Large (23.5\")"
+   ],
+   "image": "img/water-wave-bundles.jpg",
+   "gallery": [
+    "img/water-wave-bundles.jpg",
+    "img/lifestyle-curls.jpg"
+   ],
+   "rating": 4.5,
+   "reviews": 622,
+   "sold": "2K+",
+   "badge": null,
+   "description": "Three full bundles of juicy water waves in a warm reddish brown. Perfect for sew-ins, quick weaves or custom wig making.",
+   "highlights": [
+    "3 bundles, ~100g each",
+    "Double weft, minimal shedding",
+    "Reusable 1+ year with care",
+    "Pair with any 4x4 / 5x5 closure"
+   ]
+  }
+ ]
+}

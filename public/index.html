@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUXEVA Hair — Human Hair Wigs, Lace Fronts & Extensions</title>
+  <meta name="description" content="Shop 100% virgin human hair lace front wigs, glueless wigs, bobs, curly wigs and extensions. Free worldwide shipping over $99. Secure checkout with PWV Pay.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f1a17'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='%23e8c3a8' font-family='Georgia'>L</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announce">
+    <span>Free worldwide shipping over $99</span><span class="dot">•</span>
+    <span>30-day hassle-free returns</span><span class="dot">•</span>
+    <span>Code <b>WELCOME10</b> for 10% off</span>
+  </div>
+
+  <header class="header">
+    <div class="wrap header-row">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <a href="#/" class="logo">LUXEVA<span>HAIR</span></a>
+      <form class="search" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Search wigs, curls, colors…" aria-label="Search">
+        <button aria-label="Search">⌕</button>
+      </form>
+      <div class="header-actions">
+        <select id="currencySelect" class="currency" aria-label="Currency"></select>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="wrap nav-row">
+        <a href="#/shop">Shop All</a>
+        <a href="#/shop?cat=lace-front">Lace Front</a>
+        <a href="#/shop?cat=glueless">Glueless</a>
+        <a href="#/shop?cat=bob">Bob Wigs</a>
+        <a href="#/shop?cat=curly">Curly</a>
+        <a href="#/shop?cat=colored">Colored</a>
+        <a href="#/shop?cat=extensions">Extensions</a>
+        <a href="#/shop?cat=synthetic">Synthetic</a>
+        <a href="#/shop?cat=best" class="hot">Best Sellers</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <div class="logo light">LUXEVA<span>HAIR</span></div>
+        <p class="muted">Premium human hair wigs, shipped worldwide from our factory to your door.</p>
+        <div class="pay-icons">
+          <span class="pwv-badge">PWV<b>Pay</b></span><span>VISA</span><span>Mastercard</span><span>AMEX</span>
+        </div>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <a href="#/shop?cat=lace-front">Lace Front Wigs</a>
+        <a href="#/shop?cat=glueless">Glueless Wigs</a>
+        <a href="#/shop?cat=bob">Bob Wigs</a>
+        <a href="#/shop?cat=extensions">Hair Extensions</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="#/page/shipping">Shipping & Duties</a>
+        <a href="#/page/returns">Returns & Refunds</a>
+        <a href="#/page/payment">Payment (PWV Pay)</a>
+        <a href="#/page/faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Join the Hair Club</h4>
+        <p class="muted">Early access to drops & 10% off your first order.</p>
+        <form class="newsletter" onsubmit="event.preventDefault(); App.toast('Thanks for subscribing! 💌'); this.reset();">
+          <input type="email" required placeholder="Your email">
+          <button class="btn btn-accent">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 LUXEVA Hair · Demo store</span>
+      <span>Photos: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+    </div>
+  </footer>
+
+  <div class="drawer-mask" id="drawerMask"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping cart"></aside>
+  <div class="toast" id="toast"></div>
+
+  <script src="js/pricing.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

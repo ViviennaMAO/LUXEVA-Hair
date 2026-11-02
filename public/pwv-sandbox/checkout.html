@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PWV Pay — Secure Checkout (Sandbox)</title>
+  <style>
+    :root { --pwv: #3b2cc4; --pwv-2: #7d70f0; --ink: #16152b; --muted: #6d6b85; --line: #e4e2f0; --bg: #f4f3fb; --red: #d03a3a; --green: #1f8a5b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 15px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; background: var(--bg); color: var(--ink); }
+    .sandbox { background: #ffcf3f; color: #4a3a00; text-align: center; font-size: 12.5px; font-weight: 600; padding: 6px; letter-spacing: .03em; }
+    .top { background: #fff; border-bottom: 1px solid var(--line); }
+    .top-in { max-width: 920px; margin: 0 auto; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-weight: 800; font-style: italic; font-size: 24px; color: var(--pwv); letter-spacing: -.02em; }
+    .brand b { font-weight: 500; font-style: normal; color: var(--pwv-2); margin-left: 2px; }
+    .lock { font-size: 13px; color: var(--muted); }
+    .layout { max-width: 920px; margin: 28px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1.25fr; gap: 24px; align-items: start; }
+    .panel { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+    .merchant { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .mlogo { width: 44px; height: 44px; border-radius: 12px; background: #1f1a17; color: #e8c3a8; display: grid; place-items: center; font-family: Georgia, serif; font-size: 22px; }
+    .amount { font-size: 34px; font-weight: 700; margin: 6px 0 4px; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .items { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 12px; font-size: 13.5px; }
+    .items div { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; }
+    .items span:first-child { color: var(--muted); }
+    .tabs { display: grid; grid-template-columns: 1fr 1fr; background: var(--bg); border-radius: 12px; padding: 4px; margin-bottom: 20px; }
+    .tabs button { border: 0; background: none; padding: 10px; border-radius: 9px; font: inherit; font-weight: 600; cursor: pointer; color: var(--muted); }
+    .tabs button.on { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+    input { width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px; font: inherit; outline: none; margin-bottom: 14px; }
+    input:focus { border-color: var(--pwv); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .pay { width: 100%; border: 0; border-radius: 12px; background: var(--pwv); color: #fff; font: inherit; font-weight: 700; font-size: 16px; padding: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .pay:hover { background: #2f22a8; }
+    .pay:disabled { opacity: .75; cursor: progress; }
+    .pay.ghost { background: transparent; color: var(--muted); font-weight: 500; font-size: 14px; padding: 10px; }
+    .err { color: var(--red); font-size: 13.5px; min-height: 20px; margin: -4px 0 10px; }
+    .tests { margin-top: 18px; background: #fffbea; border: 1px dashed #e6c55a; border-radius: 12px; padding: 12px 14px; font-size: 12.5px; }
+    .tests b { display: block; margin-bottom: 6px; }
+    .tests button { display: flex; justify-content: space-between; width: 100%; border: 0; background: none; padding: 4px 0; font: inherit; cursor: pointer; color: var(--ink); text-align: left; }
+    .tests button:hover code { color: var(--pwv); }
+    code { font-family: ui-monospace, Menlo, monospace; }
+    .qr { width: 180px; height: 180px; margin: 6px auto 14px; border-radius: 12px; padding: 12px; background: #fff; border: 1px solid var(--line); display: grid; grid-template-columns: repeat(21, 1fr); }
+    .qr i { display: block; }
+    .qr i.k { background: var(--ink); }
+    .center { text-align: center; }
+    .spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .result { text-align: center; padding: 30px 10px; }
+    .result .ico { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 14px; display: grid; place-items: center; color: #fff; font-size: 30px; font-weight: 700; }
+    .foot { text-align: center; color: var(--muted); font-size: 12px; margin: 10px 0 40px; }
+    [hidden] { display: none !important; }
+    @media (max-width: 760px) { .layout { grid-template-columns: 1fr; margin-top: 16px; } }
+  </style>
+</head>
+<body>
+  <div class="sandbox">SANDBOX ENVIRONMENT · TEST PAYMENTS ONLY · DO NOT ENTER REAL CARD DETAILS</div>
+  <div class="top"><div class="top-in"><div class="brand">PWV<b>Pay</b></div><div class="lock">🔒 Secure checkout</div></div></div>
+
+  <div class="layout">
+    <section class="panel" id="summary"><p class="muted">Loading payment…</p></section>
+
+    <section class="panel" id="payPanel" hidden>
+      <div class="tabs">
+        <button class="on" data-tab="card">💳 Card</button>
+        <button data-tab="wallet">◎ PWV Wallet</button>
+      </div>
+
+      <form id="cardForm" autocomplete="off">
+        <label for="cardNumber">Card number</label>
+        <input id="cardNumber" inputmode="numeric" placeholder="1234 1234 1234 1234" maxlength="23" required>
+        <div class="row">
+          <div><label for="exp">Expiry</label><input id="exp" placeholder="MM / YY" maxlength="7" required></div>
+          <div><label for="cvc">CVC</label><input id="cvc" inputmode="numeric" placeholder="123" maxlength="4" required></div>
+        </div>
+        <label for="holder">Name on card</label>
+        <input id="holder" placeholder="Full name" required>
+        <div class="err" id="err"></div>
+        <button class="pay" id="payBtn">Pay</button>
+        <div class="tests">
+          <b>Sandbox test cards (click to fill)</b>
+          <button type="button" data-card="4242 4242 4242 4242"><code>4242 4242 4242 4242</code><span>✅ Success (Visa)</span></button>
+          <button type="button" data-card="5555 5555 5555 4444"><code>5555 5555 5555 4444</code><span>✅ Success (Mastercard)</span></button>
+          <button type="button" data-card="4000 0000 0000 0002"><code>4000 0000 0000 0002</code><span>❌ Card declined</span></button>
+          <button type="button" data-card="4000 0000 0000 9995"><code>4000 0000 0000 9995</code><span>❌ Insufficient funds</span></button>
+        </div>
+      </form>
+
+      <div id="walletPane" hidden>
+        <p class="center muted">Scan with the PWV app to pay</p>
+        <div class="qr" id="qr"></div>
+        <button class="pay" data-wallet="ok">Simulate: approve in PWV app</button>
+        <button class="pay ghost" data-wallet="fail">Simulate: cancel in app</button>
+      </div>
+    </section>
+
+    <section class="panel result" id="resultPanel" hidden></section>
+  </div>
+  <div class="foot">PWV Pay sandbox simulator · <a href="#" id="cancelLink">Cancel and return to merchant</a></div>
+
+  <script>
+    const pid = new URLSearchParams(location.search).get('pid');
+    const $ = (s) => document.querySelector(s);
+    let payment;
+    const fmt = (minor, cur) => new Intl.NumberFormat('en-US', { style: 'currency', currency: cur }).format(minor / 100);
+
+    async function load() {
+      const res = await fetch('/api/pwv-sandbox/payments/' + encodeURIComponent(pid));
+      if (!res.ok) { $('#summary').innerHTML = '<h3>Payment not found</h3><p class="muted">This payment link is invalid or has expired.</p>'; return; }
+      payment = await res.json();
+      $('#summary').innerHTML = `
+        <div class="merchant"><div class="mlogo">L</div><div><b>${payment.merchant_name}</b><div class="muted">Merchant ID ${payment.merchant_id}</div></div></div>
+        <div class="muted">Amount due</div>
+        <div class="amount">${fmt(payment.amount, payment.currency)}</div>
+        <div class="muted">Order ${payment.merchant_order_no} · ${payment.customer_email}</div>
+        <div class="items">${payment.line_items.map((i) => `<div><span>${i.quantity} × ${i.name}</span><span>${fmt(i.unit_amount * i.quantity, payment.currency)}</span></div>`).join('')}
+          ${payment.discount_amount ? `<div><span>Discount</span><span>−${fmt(payment.discount_amount, payment.currency)}</span></div>` : ''}
+          <div><span>Shipping</span><span>${payment.shipping_amount ? fmt(payment.shipping_amount, payment.currency) : 'Free'}</span></div></div>`;
+      $('#payBtn').textContent = 'Pay ' + fmt(payment.amount, payment.currency);
+      $('#cancelLink').href = payment.return_url;
+      if (payment.status !== 'pending') return showResult(payment.status === 'succeeded', 'This payment has already been processed.', payment.return_url);
+      $('#payPanel').hidden = false;
+    }
+
+    document.querySelectorAll('.tabs button').forEach((b) => b.onclick = () => {
+      document.querySelectorAll('.tabs button').forEach((x) => x.classList.toggle('on', x === b));
+      $('#cardForm').hidden = b.dataset.tab !== 'card';
+      $('#walletPane').hidden = b.dataset.tab !== 'wallet';
+    });
+
+    $('#cardNumber').addEventListener('input', (e) => { e.target.value = e.target.value.replace(/\D/g, '').slice(0, 19).replace(/(.{4})/g, '$1 ').trim(); });
+    $('#exp').addEventListener('input', (e) => { const v = e.target.value.replace(/\D/g, '').slice(0, 4); e.target.value = v.length > 2 ? v.slice(0, 2) + ' / ' + v.slice(2) : v; });
+    document.querySelectorAll('[data-card]').forEach((b) => b.onclick = () => {
+      $('#cardNumber').value = b.dataset.card; $('#exp').value = '12 / 30'; $('#cvc').value = '123';
+      if (!$('#holder').value) $('#holder').value = 'Test Customer';
+    });
+
+    // Fake QR pattern for the wallet tab.
+    $('#qr').innerHTML = Array.from({ length: 441 }, (_, i) => {
+      const x = i % 21, y = Math.floor(i / 21);
+      const finder = (a, b) => x >= a && x < a + 7 && y >= b && y < b + 7 && (x === a || x === a + 6 || y === b || y === b + 6 || (x > a + 1 && x < a + 5 && y > b + 1 && y < b + 5));
+      const inFinder = [[0, 0], [14, 0], [0, 14]].some(([a, b]) => x >= a && x < a + 7 && y >= b && y < b + 7);
+      const on = inFinder ? [[0, 0], [14, 0], [0, 14]].some(([a, b]) => finder(a, b)) : ((x * 7 + y * 13 + x * y) % 3 === 0);
+      return `<i class="${on ? 'k' : ''}"></i>`;
+    }).join('');
+
+    async function confirm(body, btn) {
+      const label = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span> Processing…';
+      $('#err').textContent = '';
+      try {
+        const res = await fetch(`/api/pwv-sandbox/payments/${pid}/confirm`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Payment failed');
+        await new Promise((r) => setTimeout(r, 900)); // feel like a real authorization
+        const msgs = { card_declined: 'Your card was declined.', insufficient_funds: 'Insufficient funds.', wallet_payment_cancelled: 'Payment cancelled in PWV app.' };
+        showResult(data.status === 'succeeded', data.status === 'succeeded' ? 'Payment successful. Returning you to the merchant…' : (msgs[data.reason] || 'Payment failed.') + ' Returning to the merchant…', data.redirectUrl);
+      } catch (e) {
+        $('#err').textContent = e.message;
+        btn.disabled = false;
+        btn.innerHTML = label;
+      }
+    }
+
+    function showResult(ok, msg, url) {
+      $('#payPanel').hidden = true;
+      const r = $('#resultPanel');
+      r.hidden = false;
+      r.innerHTML = `<div class="ico" style="background:${ok ? 'var(--green)' : 'var(--red)'}">${ok ? '✓' : '!'}</div><h2>${ok ? 'Paid' : 'Payment failed'}</h2><p class="muted">${msg}</p><a class="pay" style="text-decoration:none" href="${url}">Return to LUXEVA Hair</a>`;
+      setTimeout(() => { location.href = url; }, 2500);
+    }
+
+    $('#cardForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const exp = $('#exp').value.replace(/\D/g, '');
+      if (exp.length !== 4 || +exp.slice(0, 2) < 1 || +exp.slice(0, 2) > 12) { $('#err').textContent = 'Invalid expiry date'; return; }
+      if (!/^\d{3,4}$/.test($('#cvc').value)) { $('#err').textContent = 'Invalid CVC'; return; }
+      confirm({ method: 'card', cardNumber: $('#cardNumber').value }, $('#payBtn'));
+    });
+    document.querySelectorAll('[data-wallet]').forEach((b) => b.onclick = () => confirm({ method: 'wallet', scenario: b.dataset.wallet }, b));
+
+    load();
+  </script>
+</body>
+</html>

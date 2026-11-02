@@ -1,0 +1,8 @@
+{
+  "name": "luxeva-hair-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cross-border wig e-commerce demo with PWV payment integration",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
