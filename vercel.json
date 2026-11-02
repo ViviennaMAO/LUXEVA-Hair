@@ -1,7 +1,22 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "",
+  "framework": null,
   "outputDirectory": "public",
-  "rewrites": [{ "source": "/api/:path*", "destination": "/api/index?__path=:path*" }],
-  "headers": [{ "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, immutable" }] }]
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index?__path=:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, immutable"
+        }
+      ]
+    }
+  ]
 }
