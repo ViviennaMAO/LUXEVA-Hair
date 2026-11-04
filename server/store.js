@@ -24,7 +24,7 @@ function redisBackend() {
 }
 
 function fileBackend() {
-  const FILE = path.join(__dirname, '..', 'data', 'orders.json');
+  const FILE = process.env.PWV_LOCAL_STORE_FILE || path.join(__dirname, '..', 'data', 'orders.json');
   let data = {};
   try { data = JSON.parse(fs.readFileSync(FILE, 'utf8')); } catch { data = {}; }
   return {

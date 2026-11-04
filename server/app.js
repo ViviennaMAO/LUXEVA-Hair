@@ -89,6 +89,7 @@ async function handleNotification(raw, signature) {
   const order = await store.get('order:' + d.merchant_order_no);
   if (!order) throw new HttpError(404, 'Unknown order');
   if (order.paymentEvents.some((e) => e.id === evt.id)) return { received: true, duplicate: true };
+  if (d.payment_id !== order.paymentId) throw new HttpError(400, 'Payment mismatch');
   if (d.amount !== order.total || d.currency !== order.currency) throw new HttpError(400, 'Amount mismatch');
 
   const events = [...order.paymentEvents, { id: evt.id, type: evt.type, paymentId: d.payment_id, method: d.method, last4: d.card_last4, reason: d.failure_reason, at: new Date().toISOString() }];
@@ -132,7 +133,16 @@ const routes = [
     return startPayment(req, order);
   }],
 
-  ['GET', /^\/api\/orders\/([\w-]+)$/, async (req, [id], query) => orderView(await authOrder(id, query.get('token')))],
+  ['GET', /^\/api\/orders\/([\w-]+)$/, async (req, [id], query) => {
+    let order = await authOrder(id, query.get('token'));
+    if (pwv.config.mode === 'local-platform' && order.status !== 'paid') {
+      try {
+        const receipt = await require('./local-platform').receipt(order);
+        if (receipt?.state === 'PAID') order = await store.update('order:' + id, { status: 'paid', paidAt: new Date().toISOString(), paymentId: receipt.payment_id });
+      } catch { /* Keep pending if the platform cannot be verified. */ }
+    }
+    return orderView(order);
+  }],
 
   ['POST', /^\/api\/orders\/([\w-]+)\/pay$/, async (req, [id], query) => {
     const order = await authOrder(id, query.get('token'));

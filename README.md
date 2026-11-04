@@ -99,3 +99,12 @@ public/                前端（原生 JS 单页应用）
 
 商品图来自 [Unsplash](https://unsplash.com)（Unsplash License，可免费商用）。正式上线建议换成自家实拍图。
 评价内容为演示样例。
+
+### 本地平台 PWV 联调（dev1104）
+
+新增 `PWV_MODE=local-platform`，用于本地测试数据库的 PWV 消费；不是 live 商家上线。
+配置 `PWV_LOCAL_KEY`（与本地平台共享，至少 32 字符）、`PWV_LOCAL_PLATFORM_URL=http://localhost:3000`、`PWV_LOCAL_PLATFORM_API=http://127.0.0.1:35080`、`PUBLIC_URL=http://localhost:5180`、`PORT=5180`；可用 `PWV_LOCAL_STORE_FILE` 将订单文件放到仓库外。密钥不提交。
+
+该模式仅接受 loopback HTTP，监听 127.0.0.1；金额按服务端 USD 商品/规格/优惠/运费重算。浏览器进入平台确认，确认后扣本地 PWV，由签名回调或商家查询服务端回单确认 Paid。返回 URL 本身不建立支付成功。原 sandbox 默认模式保留。
+
+测试：`node --test test/local-platform.test.js`。静态 home 预览站不会因本地代码改变而自动接上商家 API；正式商家授权、结算身份、部署和资金验收仍需单独处理，不能将这个 local 模式用于真实资金。

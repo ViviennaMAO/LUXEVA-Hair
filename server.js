@@ -7,6 +7,8 @@ const { handleApi, send } = require('./server/app');
 const pwv = require('./server/pwv');
 const store = require('./server/store');
 
+if (pwv.config.mode === 'local-platform') require('./server/local-platform').settings();
+
 const PORT = Number(process.env.PORT) || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml', '.ico': 'image/x-icon' };
@@ -26,6 +28,6 @@ http.createServer((req, res) => {
   const { pathname } = new URL(req.url, 'http://localhost');
   if (pathname.startsWith('/api/')) return handleApi(req, res);
   serveStatic(req, res, pathname);
-}).listen(PORT, () => {
+}).listen(PORT, process.env.PWV_MODE === 'local-platform' ? '127.0.0.1' : undefined, () => {
   console.log(`LUXEVA Hair running at http://localhost:${PORT}  (PWV mode: ${pwv.config.mode}, storage: ${store.backend})`);
 });

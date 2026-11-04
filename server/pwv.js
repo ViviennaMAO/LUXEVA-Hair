@@ -16,7 +16,7 @@ const config = {
   mode: process.env.PWV_MODE || 'sandbox',
   merchantId: process.env.PWV_MERCHANT_ID || 'M_SANDBOX_10086',
   apiKey: process.env.PWV_API_KEY || 'pk_sandbox_demo',
-  secret: process.env.PWV_SECRET || 'sk_sandbox_demo_secret',
+  secret: process.env.PWV_MODE === 'local-platform' ? process.env.PWV_LOCAL_KEY : (process.env.PWV_SECRET || 'sk_sandbox_demo_secret'),
   apiBase: process.env.PWV_API_BASE || 'https://api.pwv.example.com/v1',
 };
 
@@ -59,6 +59,7 @@ function toPwvRequest(order, { returnUrl, notifyUrl }) {
 async function createPayment(order, urls) {
   const req = toPwvRequest(order, urls);
   if (config.mode === 'sandbox') return sandbox.create(req);
+  if (config.mode === 'local-platform') return require('./local-platform').create(order, urls);
 
   const body = JSON.stringify(req);
   const res = await fetch(`${config.apiBase}/payments`, {

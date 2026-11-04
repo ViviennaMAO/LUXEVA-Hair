@@ -433,10 +433,11 @@
             <label class="pay-opt on">
               <input type="radio" name="pay" value="pwv" checked>
               <span class="pwv-badge lg">PWV<b>Pay</b></span>
-              <span class="pay-desc">Cards, PWV Wallet & local methods · Pay in ${S.currency}</span>
-              <span class="cards"><i>VISA</i><i>MC</i><i>AMEX</i><i>JCB</i></span>
+              <span class="pay-desc">${S.config.pwv.mode === 'local-platform' ? 'PWV Wallet · USD-priced checkout' : 'Cards, PWV Wallet & local methods · Pay in ' + S.currency}</span>
+              ${S.config.pwv.mode === 'local-platform' ? '' : '<span class="cards"><i>VISA</i><i>MC</i><i>AMEX</i><i>JCB</i></span>'}
             </label>
             <p class="muted small">After clicking “Pay”, you'll be redirected to PWV's secure checkout to complete your purchase. We never see or store your card details.</p>
+            ${S.config.pwv.mode === 'local-platform' ? '<p class="sandbox-note">Local test ledger — no real funds or shipments.</p>' : ''}
             ${S.config.pwv.mode === 'sandbox' ? '<p class="sandbox-note">Sandbox mode — no real money will be charged.</p>' : ''}
           </div>
           <p class="form-error" id="coError"></p>
@@ -550,7 +551,7 @@
   function orderHtml(o) {
     const reasons = { card_declined: 'Your card was declined by the issuing bank.', insufficient_funds: 'The card has insufficient funds.', wallet_payment_cancelled: 'The PWV Wallet payment was cancelled.' };
     const head = {
-      paid: `<div class="status ok"><div class="status-ico">✓</div><h1>Thank you, ${esc(o.shipping.firstName)}!</h1><p>Your payment was received and order <b>${o.id}</b> is confirmed. A confirmation has been sent to <b>${esc(o.email)}</b>.</p></div>`,
+      paid: `<div class="status ok"><div class="status-ico">✓</div><h1>Thank you, ${esc(o.shipping.firstName)}!</h1><p>Your payment was received and order <b>${o.id}</b> is confirmed. ${S.config.pwv.mode === 'local-platform' ? 'Local test only — no real funds, shipment or confirmation email.' : 'A confirmation has been sent to <b>' + esc(o.email) + '</b>.'}</p></div>`,
       payment_failed: `<div class="status fail"><div class="status-ico">!</div><h1>Payment not completed</h1><p>${esc(reasons[o.failureReason] || 'Your payment could not be processed.')} Your order <b>${o.id}</b> is saved — you can try again.</p><button class="btn btn-accent" id="retryPay">Try again with PWV</button></div>`,
     }[o.status] || `<div class="status wait"><div class="status-ico"><span class="spinner dark"></span></div><h1>Confirming your payment…</h1><p>We're waiting for PWV to confirm order <b>${o.id}</b>. This usually takes a few seconds.</p><button class="btn btn-outline" id="retryPay">Return to PWV checkout</button></div>`;
     const pay = o.paymentEvents.filter((e) => e.type === 'payment.succeeded').pop();
